@@ -1,0 +1,21 @@
+.picPopBg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9999;
+}
+
+.closeBtn {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    color: #fff;
+    line-height: 80px;
+    z-index: 999999;
+}

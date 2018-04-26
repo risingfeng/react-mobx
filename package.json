@@ -9,10 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-modules": "^0.3.0",
     "mobx": "^4.2.0",
     "mobx-react": "^5.0.0",
+    "postcss-loader": "^2.1.4",
+    "postcss-modules-values": "^1.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-id-swiper": "^1.6.2",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {

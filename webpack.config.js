@@ -1,5 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const srcPath = path.resolve(__dirname, './src');
 
 module.exports = {
     entry: './src/entry.js',
@@ -36,16 +39,28 @@ module.exports = {
                 }
             }, {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: "style-loader",
+                include: path.join(srcPath, '/css'),
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
                         options: {
-                            singleton: true,
+                            modules: true,
+                            minimize: false,
+                            localIdentName: '[name]__[local]--[hash:base64:6]',
                         }
-                    }, {
-                        loader: "css-loader",
-                    }
-                ]
+                    },]
+                })
+            }, {
+                test: /\.css$/,
+                exclude: path.join(srcPath, '/css'),
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
+                        options: {}
+                    },]
+                })
             }, {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: {
@@ -58,6 +73,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new ExtractTextPlugin({
+            filename: 'all.css',
+            allChunks: true,
+            ignoreOrder: true
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
         })

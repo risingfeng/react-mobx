@@ -1,0 +1,43 @@
+body, div {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #333333;
+    overflow: hidden;
+}
+
+.project {
+    width: 690px;
+    padding: 50px 30px;
+}
+
+.catListBg {
+    width: 690px;
+    margin: 0 30px;
+    display: table;
+}
+
+span, img {
+    display: inline-block;
+}
+
+img {
+    object-fit: cover;
+}
+
+.catItem {
+    width: 222px;
+    height: 222px;
+    margin: 0 12px 12px 0;
+}
+
+.catItem:nth-child(3n) {
+    margin-right: 0;
+}
+
