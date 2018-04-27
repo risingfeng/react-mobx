@@ -2,9 +2,11 @@ import React from 'react'
 import {observer, inject} from 'mobx-react'
 import styles from '../css/pic.css'
 import PicPopSwiper from './swiper'
+import CSSModules from 'react-css-modules'
 
 @inject('pic')
 @observer
+@CSSModules(styles, {allowMultiple: true, handleNotFoundStyleName: 'ignore'})
 class Pic extends React.Component {
 
     state = {
@@ -21,18 +23,18 @@ class Pic extends React.Component {
     }
 
     catListShowFunc = (item, index) => {
-        return <img src={item.imgUrl} className={styles.catItem} key={item.id + index}
+        return <img src={item.imgUrl} styleName="catItem" key={item.id + index}
                     onClick={() => this.showPop(index)}/>
     }
 
     render() {
         let {picPopControl, currentIndex} = this.state
         let {catList} = this.props.pic
-        return <div className={styles.bg}>
-            <div className={styles.project}>
+        return <div styleName="bg">
+            <div styleName="project">
                 this is some cats and you can point out the way you look at each one.
             </div>
-            <div className={styles.catListBg}>
+            <div styleName="catListBg">
                 {catList && catList.length && catList.map(this.catListShowFunc)}
             </div>
             {picPopControl && <PicPopSwiper closePicPop={this.closePicPop} {...{currentIndex}}/>}

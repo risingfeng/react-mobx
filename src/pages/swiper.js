@@ -1,4 +1,5 @@
 import React from 'react'
+import CSSModules from 'react-css-modules'
 import Swiper from 'react-id-swiper';
 import styles from '../css/swiper.css'
 import {inject, observer} from "mobx-react/index";
@@ -6,6 +7,7 @@ import {inject, observer} from "mobx-react/index";
 
 @inject('pic')
 @observer
+@CSSModules(styles, {allowMultiple: true, handleNotFoundStyleName: 'ignore'})
 class PicPopSwiper extends React.Component {
     constructor(props) {
         super(props)
@@ -32,11 +34,11 @@ class PicPopSwiper extends React.Component {
         };
         let {closePicPop,} = this.props
         let {catList} = this.props.pic
-        return <div className={styles.picPopBg}>
+        return <div styleName="picPopBg">
             <Swiper {...params}>
                 {catList.map(this.catListFunc)}
             </Swiper>
-            <div className={styles.closeBtn} onClick={closePicPop}>关闭</div>
+            <div styleName="closeBtn" onClick={closePicPop}>关闭</div>
         </div>
     }
 }
