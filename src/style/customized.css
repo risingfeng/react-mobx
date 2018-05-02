@@ -13,3 +13,8 @@
 .customized-swiper-pagination {
     color: #fff;
 }
+
+.customized-slide-container {
+    width: 100%;
+    height: 100%;
+}

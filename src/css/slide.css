@@ -1,0 +1,25 @@
+.bg {
+    width: 100%;
+    height: 100%;
+    font-size: 26px;
+    color: #666666;
+    text-align: center;
+}
+
+.slideBg {
+    margin: 30px 30px 0;
+}
+
+.slide1Bg {
+}
+
+.slide3Bg {
+}
+
+.slide1Main {
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+    margin: 100px auto;
+    color: blue;
+}
