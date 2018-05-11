@@ -1,0 +1,64 @@
+.bg {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.snowFlow {
+    width: 750px;
+    height: 500px;
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes mysnow {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(720deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 0;
+        top: 100%;
+    }
+
+}
+
+.container {
+    position: absolute;
+    height: 60%;
+    width: 80%;
+    top: 0;
+    left: 0;
+}
+
+.pic {
+    position: absolute;
+    opacity: 1;
+    animation: mysnow 4s infinite cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.pic:nth-child(5n) {
+    position: absolute;
+    opacity: 1;
+    animation: mysnow 4s infinite cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pic img:nth-child(5n) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

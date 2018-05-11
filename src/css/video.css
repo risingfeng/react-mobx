@@ -1,0 +1,67 @@
+html, body {
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.videoBg {
+    width: 90%;
+    height: 700px;
+    margin: 100px auto;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.videoBtn {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 100px;
+    color: #333;
+    z-index: 9;
+}
+
+.videobox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.upBtnBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btnText {
+    width: 200px;
+    height: 200px;
+    color: #ffffff;
+    line-height: 200px;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -100px;
+}

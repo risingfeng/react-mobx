@@ -16,6 +16,8 @@ export default (stores) => {
                 <Route exact path='/faq' component={Pages.Faq}/>
                 <Route exact path='/slide' component={Pages.Slide}/>
                 <Route exact path='/hand-slide' component={Pages.HandSlide}/>
+                <Route exact path='/video' component={Pages.Video}/>
+                <Route exact path='/snow' component={Pages.Snow}/>
                 <Route component={Pages.NotFound}/>
             </Switch>
         </Provider>
