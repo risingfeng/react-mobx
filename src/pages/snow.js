@@ -61,7 +61,7 @@ class Snow extends React.Component {
         return <div styleName="bg">
             <div styleName="snowFlow" ref={ele => {
                 this.snowFlow = ele
-            }} id="snowFlow">
+            }}>
                 <div styleName="container">
                     {PICS_ARRAY && (PICS_ARRAY.length != 0) && PICS_ARRAY.map(this.snowFlowFunc)}
                 </div>
