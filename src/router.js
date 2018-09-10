@@ -12,7 +12,7 @@ export default (stores) => {
         <Provider {...stores} >
             <Switch>
                 <Route exact path='/nav' component={Pages.Nav}/>
-                <Route exact path='/pic' component={Pages.Pic}/>
+                <Route exact path='/pic/:picId' component={Pages.Pic}/>
                 <Route exact path='/faq' component={Pages.Faq}/>
                 <Route exact path='/slide' component={Pages.Slide}/>
                 <Route exact path='/hand-slide' component={Pages.HandSlide}/>

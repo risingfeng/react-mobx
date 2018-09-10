@@ -3,6 +3,7 @@ import {observer, inject} from 'mobx-react'
 import styles from '../css/pic.css'
 import PicPopSwiper from './swiper'
 import CSSModules from 'react-css-modules'
+import Header from '../components/header'
 
 @inject('pic')
 @observer
@@ -12,6 +13,11 @@ class Pic extends React.Component {
     state = {
         picPopControl: false,
         currentIndex: 0,
+    }
+
+    componentDidMount() {
+        // 从路径获取来的参数
+        console.log(this.props.match.params.picId)
     }
 
     showPop = (index) => {
@@ -31,6 +37,7 @@ class Pic extends React.Component {
         let {picPopControl, currentIndex} = this.state
         let {catList} = this.props.pic
         return <div styleName="bg">
+            <Header title='图片页' history={this.props.history} />
             <div styleName="project">
                 this is some cats and you can point out the way you look at each one.
             </div>
